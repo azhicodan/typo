@@ -147,7 +147,7 @@
       <%= render 'admin/content/attachment', { :attachment_num => 1, :hidden => false } -%>
     </ul>
   </div>
-  <div class='' <%= "style='display: none;'" unless current_user.profile_id == '2'%> >
+  <div class='' <%= "style='display: none;'" unless current_user.profile_id == 1 %> >
     <h3><%= _("Merge Articles") %></h3>
     <input id="merge_with" type="text" name="merge_with" class='large' />
     <%= submit_tag(_("Merge"), {:class => 'btn'}) %>    

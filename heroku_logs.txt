@@ -1,0 +1,101 @@
+2013-08-21T12:12:13.214426+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/_article.html.erb (21.8ms)
+2013-08-21T12:12:13.214623+00:00 app[web.1]: Completed 500 Internal Server Error in 38ms
+2013-08-21T12:12:13.217237+00:00 app[web.1]: ActionView::Template::Error (undefined method `empty?' for #<Syck::PrivateType:0x00000005322f58>):
+2013-08-21T12:12:13.217237+00:00 app[web.1]: 
+2013-08-21T12:12:13.217237+00:00 app[web.1]:     3: <% else %>
+2013-08-21T12:12:13.214426+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/index.html.erb within layouts/default (22.8ms)
+2013-08-21T12:12:13.217237+00:00 app[web.1]:     4:   <%= render 'articles/password_form', { :article => article } %>
+2013-08-21T12:12:13.217237+00:00 app[web.1]:   app/views/articles/_protected_article_content.html.erb:1:in `_app_views_articles__protected_article_content_html_erb__4301492436017811066_45331160__1751691695539032380'
+2013-08-21T12:12:13.217412+00:00 app[web.1]: 
+2013-08-21T12:12:13.217237+00:00 app[web.1]:     1: <% if article.password.nil? or article.password.empty? %>
+2013-08-21T12:12:13.217237+00:00 app[web.1]:   app/controllers/articles_controller.rb:38:in `block (2 levels) in index'
+2013-08-21T12:12:13.217412+00:00 app[web.1]: 
+2013-08-21T12:12:13.217237+00:00 app[web.1]:     2:   <%= render 'articles/article_content', { :article => article } %>
+2013-08-21T12:12:13.217237+00:00 app[web.1]:   app/controllers/articles_controller.rb:211:in `render_paginated_index'
+2013-08-21T12:12:13.217237+00:00 app[web.1]:   app/controllers/articles_controller.rb:37:in `index'
+2013-08-21T12:12:13.213732+00:00 heroku[router]: at=info method=GET path=/ host=warm-spire-7892.herokuapp.com fwd="66.249.72.5" dyno=web.1 connect=10ms service=61ms status=500 bytes=728
+2013-08-21T12:13:16.174906+00:00 app[web.1]: 
+2013-08-21T12:13:16.174906+00:00 app[web.1]: 
+2013-08-21T12:13:16.175897+00:00 app[web.1]:   Processing by ArticlesController#index as 
+2013-08-21T12:13:16.174906+00:00 app[web.1]: Started GET "/" for 66.249.72.139 at 2013-08-21 12:13:16 +0000
+2013-08-21T12:13:16.199290+00:00 app[web.1]: Rendered articles/_article_excerpt.html.erb (3.1ms)
+2013-08-21T12:13:16.199398+00:00 app[web.1]: Rendered articles/_article_content.html.erb (5.0ms)
+2013-08-21T12:13:16.199489+00:00 app[web.1]: Rendered articles/_protected_article_content.html.erb (6.1ms)
+2013-08-21T12:13:16.209148+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/_article.html.erb (19.0ms)
+2013-08-21T12:13:16.209467+00:00 app[web.1]: Completed 500 Internal Server Error in 33ms
+2013-08-21T12:13:16.209148+00:00 app[web.1]: Rendered articles/_protected_article_content.html.erb (0.4ms)
+2013-08-21T12:13:16.209355+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/index.html.erb within layouts/default (20.4ms)
+2013-08-21T12:13:16.212564+00:00 app[web.1]:     1: <% if article.password.nil? or article.password.empty? %>
+2013-08-21T12:13:16.212564+00:00 app[web.1]:     2:   <%= render 'articles/article_content', { :article => article } %>
+2013-08-21T12:13:16.212564+00:00 app[web.1]:     4:   <%= render 'articles/password_form', { :article => article } %>
+2013-08-21T12:13:16.212564+00:00 app[web.1]:   app/controllers/articles_controller.rb:211:in `render_paginated_index'
+2013-08-21T12:13:16.212564+00:00 app[web.1]: 
+2013-08-21T12:13:16.212564+00:00 app[web.1]:     3: <% else %>
+2013-08-21T12:13:16.212747+00:00 app[web.1]: 
+2013-08-21T12:13:16.212564+00:00 app[web.1]:   app/views/articles/_protected_article_content.html.erb:1:in `_app_views_articles__protected_article_content_html_erb__4301492436017811066_45331160__1751691695539032380'
+2013-08-21T12:13:16.212564+00:00 app[web.1]: ActionView::Template::Error (undefined method `empty?' for #<Syck::PrivateType:0x00000005019938>):
+2013-08-21T12:13:16.212564+00:00 app[web.1]:   app/controllers/articles_controller.rb:38:in `block (2 levels) in index'
+2013-08-21T12:13:16.212564+00:00 app[web.1]:   app/controllers/articles_controller.rb:37:in `index'
+2013-08-21T12:13:16.212747+00:00 app[web.1]: 
+2013-08-21T12:13:16.206341+00:00 heroku[router]: at=info method=GET path=/ host=warm-spire-7892.herokuapp.com fwd="66.249.72.139" dyno=web.1 connect=1ms service=41ms status=500 bytes=728
+2013-08-21T12:14:18.476025+00:00 app[web.1]: 
+2013-08-21T12:14:18.476025+00:00 app[web.1]: 
+2013-08-21T12:14:18.477085+00:00 app[web.1]:   Processing by ArticlesController#index as 
+2013-08-21T12:14:18.476025+00:00 app[web.1]: Started GET "/" for 66.249.72.202 at 2013-08-21 12:14:18 +0000
+2013-08-21T12:14:18.497754+00:00 app[web.1]: Rendered articles/_article_content.html.erb (3.6ms)
+2013-08-21T12:14:18.497754+00:00 app[web.1]: Rendered articles/_article_excerpt.html.erb (2.5ms)
+2013-08-21T12:14:18.497911+00:00 app[web.1]: Rendered articles/_protected_article_content.html.erb (4.5ms)
+2013-08-21T12:14:18.506697+00:00 app[web.1]: Rendered articles/_protected_article_content.html.erb (0.6ms)
+2013-08-21T12:14:18.506867+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/index.html.erb within layouts/default (16.7ms)
+2013-08-21T12:14:18.506697+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/_article.html.erb (15.5ms)
+2013-08-21T12:14:18.507002+00:00 app[web.1]: Completed 500 Internal Server Error in 30ms
+2013-08-21T12:14:18.509636+00:00 app[web.1]: 
+2013-08-21T12:14:18.509636+00:00 app[web.1]: ActionView::Template::Error (undefined method `empty?' for #<Syck::PrivateType:0x00000004c5f6a8>):
+2013-08-21T12:14:18.509636+00:00 app[web.1]:     2:   <%= render 'articles/article_content', { :article => article } %>
+2013-08-21T12:14:18.509636+00:00 app[web.1]:     3: <% else %>
+2013-08-21T12:14:18.509636+00:00 app[web.1]:     1: <% if article.password.nil? or article.password.empty? %>
+2013-08-21T12:14:18.509636+00:00 app[web.1]:     4:   <%= render 'articles/password_form', { :article => article } %>
+2013-08-21T12:14:18.509636+00:00 app[web.1]:   app/views/articles/_protected_article_content.html.erb:1:in `_app_views_articles__protected_article_content_html_erb__4301492436017811066_45331160__1751691695539032380'
+2013-08-21T12:14:18.509636+00:00 app[web.1]:   app/controllers/articles_controller.rb:211:in `render_paginated_index'
+2013-08-21T12:14:18.509636+00:00 app[web.1]:   app/controllers/articles_controller.rb:38:in `block (2 levels) in index'
+2013-08-21T12:14:18.509636+00:00 app[web.1]:   app/controllers/articles_controller.rb:37:in `index'
+2013-08-21T12:14:18.509798+00:00 app[web.1]: 
+2013-08-21T12:14:18.509798+00:00 app[web.1]: 
+2013-08-21T12:14:18.507078+00:00 heroku[router]: at=info method=GET path=/ host=warm-spire-7892.herokuapp.com fwd="66.249.72.202" dyno=web.1 connect=2ms service=40ms status=500 bytes=728
+2013-08-21T13:16:16.084495+00:00 heroku[web.1]: Idling
+2013-08-21T13:16:21.030332+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2013-08-21T13:16:24.128836+00:00 heroku[web.1]: State changed from up to down
+2013-08-21T13:16:24.100712+00:00 heroku[web.1]: Process exited with status 0
+2013-08-21T14:44:07.098068+00:00 heroku[web.1]: State changed from down to starting
+2013-08-21T14:44:07.097757+00:00 heroku[web.1]: Unidling
+2013-08-21T14:44:11.047457+00:00 heroku[web.1]: Starting process with command `bundle exec thin start -R config.ru -e $RAILS_ENV -p 40104`
+2013-08-21T14:44:16.091238+00:00 app[web.1]: You did not specify how you would like Rails to report deprecation notices for your production environment, please set config.active_support.deprecation to :notify at config/environments/production.rb
+2013-08-21T14:44:18.888561+00:00 app[web.1]: >> Thin web server (v1.5.0 codename Knife)
+2013-08-21T14:44:18.888561+00:00 app[web.1]: >> Maximum connections set to 1024
+2013-08-21T14:44:18.888561+00:00 app[web.1]: >> Listening on 0.0.0.0:40104, CTRL+C to stop
+2013-08-21T14:44:19.244521+00:00 heroku[web.1]: State changed from starting to up
+2013-08-21T14:44:21.163935+00:00 app[web.1]: Started GET "/" for 103.5.132.53 at 2013-08-21 14:44:21 +0000
+2013-08-21T14:44:21.163935+00:00 app[web.1]: 
+2013-08-21T14:44:21.163935+00:00 app[web.1]: 
+2013-08-21T14:44:21.224929+00:00 app[web.1]:   Processing by ArticlesController#index as HTML
+2013-08-21T14:44:21.585648+00:00 app[web.1]: Rendered articles/_article_excerpt.html.erb (18.6ms)
+2013-08-21T14:44:21.585648+00:00 app[web.1]: Rendered articles/_article_content.html.erb (20.2ms)
+2013-08-21T14:44:21.585648+00:00 app[web.1]: Rendered articles/_protected_article_content.html.erb (21.7ms)
+2013-08-21T14:44:21.694784+00:00 heroku[router]: at=info method=GET path=/ host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=532ms status=500 bytes=728
+2013-08-21T14:44:21.685029+00:00 app[web.1]: Rendered articles/_protected_article_content.html.erb (48.7ms)
+2013-08-21T14:44:21.685029+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/_article.html.erb (124.1ms)
+2013-08-21T14:44:21.692714+00:00 app[web.1]:     2:   <%= render 'articles/article_content', { :article => article } %>
+2013-08-21T14:44:21.685029+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/index.html.erb within layouts/default (146.5ms)
+2013-08-21T14:44:21.692714+00:00 app[web.1]:     3: <% else %>
+2013-08-21T14:44:21.692714+00:00 app[web.1]:     4:   <%= render 'articles/password_form', { :article => article } %>
+2013-08-21T14:44:21.692714+00:00 app[web.1]:   app/controllers/articles_controller.rb:37:in `index'
+2013-08-21T14:44:21.685250+00:00 app[web.1]: Completed 500 Internal Server Error in 460ms
+2013-08-21T14:44:21.692714+00:00 app[web.1]: 
+2013-08-21T14:44:21.692714+00:00 app[web.1]: ActionView::Template::Error (undefined method `empty?' for #<Syck::PrivateType:0x00000005d948b0>):
+2013-08-21T14:44:21.692714+00:00 app[web.1]:     1: <% if article.password.nil? or article.password.empty? %>
+2013-08-21T14:44:21.692714+00:00 app[web.1]:   app/controllers/articles_controller.rb:211:in `render_paginated_index'
+2013-08-21T14:44:21.692943+00:00 app[web.1]: 
+2013-08-21T14:44:21.692714+00:00 app[web.1]:   app/views/articles/_protected_article_content.html.erb:1:in `_app_views_articles__protected_article_content_html_erb__4445546158320314318_49718040_520947189139561426'
+2013-08-21T14:44:21.692714+00:00 app[web.1]:   app/controllers/articles_controller.rb:38:in `block (2 levels) in index'
+2013-08-21T14:44:21.692943+00:00 app[web.1]: 
+2013-08-21T14:44:22.345742+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=3ms status=200 bytes=0
