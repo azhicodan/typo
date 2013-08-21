@@ -5,9 +5,8 @@ I want to be able to merge two articles
 
 Background:
 Given the blog is set up
-And I am logged into the admin panel
 
 Scenario: Non Admin cannot merge articles
-Given I am on the edit article page
-And I am not an admin user
-Then I should not see Merge articles
+Given I am a nonadmin user
+And I am on the edit article page
+Then I should not be able to merge articles
