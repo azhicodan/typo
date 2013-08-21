@@ -19,7 +19,7 @@ module NavigationHelpers
       '/admin/content/new'
 
     when /^the edit article page$/
-      'admin/content/edit/1'
+      'admin/content/edit/29'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
