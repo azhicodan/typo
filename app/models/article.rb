@@ -77,6 +77,12 @@ class Article < Content
     self.permalink = self.title.to_permalink if self.permalink.nil? or self.permalink.empty?
   end
 
+  def merge_with(article_id = nil, user_login = nil)
+    merge_article = Article.find(article_id)
+    merged_body = self.body + merge_article.body
+    Article.create(:allow_comments => true, :allow_pings => true, :author => self.author, :body => merged_body, :permalink => self.permalink, :published => true, :published_at => Time.now, :title => self.title, :type => "Article", :user_id => user_login)
+  end
+  
   def has_child?
     Article.exists?({:parent_id => self.id})
   end
@@ -466,11 +472,5 @@ class Article < Content
     to = from + 1.day unless day.blank?
     to = to - 1 # pull off 1 second so we don't overlap onto the next day
     return from..to
-  end
-
-  def merge_with(article_id = nil, user_login = nil)
-    merge_article = Article.find(article_id)
-    merged_body = self.body + merge_article.body
-    Article.create(:allow_comments => true, :allow_pings => true, :author => self.author, :body => merged_body, :permalink => self.permalink, :published => true, :published_at => Time.now, :title => self.title, :type => "Article", :user_id => user_login)
   end
 end
