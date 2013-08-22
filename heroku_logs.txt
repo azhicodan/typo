@@ -1,102 +1,101 @@
-2013-08-22T09:48:52.221053+00:00 app[web.1]: Rendered admin/content/_merge_article.html.erb (0.8ms)
-2013-08-22T09:48:52.234912+00:00 app[web.1]: Rendered admin/content/new.html.erb within layouts/administration (52.9ms)
-2013-08-22T09:48:52.236204+00:00 app[web.1]: Completed 200 OK in 78ms (Views: 46.5ms | ActiveRecord: 22.1ms)
-2013-08-22T09:48:52.241890+00:00 heroku[router]: at=info method=GET path=/admin/content/new host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=84ms status=200 bytes=15304
-2013-08-22T09:48:52.875083+00:00 heroku[router]: at=info method=GET path=/images/calendar_date_select/calendar.gif?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=3ms status=200 bytes=581
-2013-08-22T09:48:53.074573+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/config.js?t=B8DJ5M3 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=3ms status=200 bytes=770
-2013-08-22T09:48:53.074375+00:00 heroku[router]: at=info method=GET path=/images/spinner-blue.gif?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=2ms status=200 bytes=1898
-2013-08-22T09:48:53.441298+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/lang/en.js?t=B8DJ5M3 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=21ms service=12ms status=200 bytes=17278
-2013-08-22T09:48:53.453017+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/skins/kama/editor.css?t=B8DJ5M3 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=19ms service=23ms status=200 bytes=30554
-2013-08-22T09:48:54.185672+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/contents.css host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=3ms status=200 bytes=559
-2013-08-22T09:48:54.470131+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/plugins/styles/styles/default.js?t=B8DJ5M3 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=5ms status=200 bytes=1365
-2013-08-22T09:48:54.675873+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/skins/kama/images/sprites.png host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=3ms status=200 bytes=7086
-2013-08-22T09:48:54.706698+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/skins/kama/icons.png host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=6ms service=7ms status=200 bytes=5598
-2013-08-22T09:49:23.088814+00:00 app[web.1]: Started POST "/admin/content/new" for 103.5.132.53 at 2013-08-22 09:49:23 +0000
-2013-08-22T09:49:23.088814+00:00 app[web.1]: 
-2013-08-22T09:49:23.088814+00:00 app[web.1]: 
-2013-08-22T09:49:23.101250+00:00 app[web.1]:   Processing by Admin::ContentController#new as HTML
-2013-08-22T09:49:23.101250+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"ua905mxgL/k3L9xGAhPIPAoMCVjJA1hy+Ik8f1u+H7o=", "current_editor"=>"visual", "user_textfilter"=>"none", "article"=>{"published"=>"1", "allow_pings"=>"0", "allow_comments"=>"1", "published_at"=>"August 22, 2013 09:48 AM GMT+0000 (UTC)", "password"=>"[FILTERED]", "permalink"=>"", "text_filter"=>"markdown smartypants", "post_type"=>"read", "title"=>"Test article", "body_and_extended"=>"<p>\r\n\tMy article</p>\r\n", "keywords"=>"", "excerpt"=>""}, "id"=>nil}
-2013-08-22T09:49:23.188025+00:00 app[web.1]: Rendered notification_mailer/_mail_header.html.erb (0.0ms)
-2013-08-22T09:49:23.198426+00:00 app[web.1]: Rendered notification_mailer/article.html.erb (10.7ms)
-2013-08-22T09:49:23.198426+00:00 app[web.1]: Rendered notification_mailer/_mail_footer.html.erb (0.5ms)
-2013-08-22T09:49:23.373219+00:00 app[web.1]: sh: /usr/sbin/sendmail: not found
-2013-08-22T09:49:23.380299+00:00 app[web.1]: Sent mail to azhicodan@gmail.com (125ms)
-2013-08-22T09:49:23.380299+00:00 app[web.1]: 
-2013-08-22T09:49:23.380354+00:00 app[web.1]: Unable to send article email: #<Errno::EPIPE: Broken pipe>
-2013-08-22T09:49:23.443003+00:00 heroku[router]: at=info method=POST path=/admin/content/new host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=592ms status=302 bytes=116
-2013-08-22T09:49:23.432848+00:00 app[web.1]: Redirected to http://warm-spire-7892.herokuapp.com/admin/content
-2013-08-22T09:49:23.437572+00:00 app[web.1]: Completed 302 Found in 336ms
-2013-08-22T09:49:23.711602+00:00 app[web.1]:   Processing by Admin::ContentController#index as HTML
-2013-08-22T09:49:23.709982+00:00 app[web.1]: 
-2013-08-22T09:49:23.709982+00:00 app[web.1]: Started GET "/admin/content" for 103.5.132.53 at 2013-08-22 09:49:23 +0000
-2013-08-22T09:49:23.709982+00:00 app[web.1]: 
-2013-08-22T09:49:23.857012+00:00 app[web.1]: Rendered admin/content/_article_list.html.erb (77.4ms)
-2013-08-22T09:49:23.871687+00:00 app[web.1]: Rendered admin/content/index.html.erb within layouts/administration (100.5ms)
-2013-08-22T09:49:23.871900+00:00 app[web.1]: Completed 200 OK in 160ms (Views: 57.6ms | ActiveRecord: 189.3ms)
-2013-08-22T09:49:23.878597+00:00 heroku[router]: at=info method=GET path=/admin/content host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=167ms status=200 bytes=9437
-2013-08-22T09:49:24.195302+00:00 heroku[router]: at=info method=GET path=/stylesheets/administration_structure.css?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=12ms status=200 bytes=2401
-2013-08-22T09:49:24.196415+00:00 heroku[router]: at=info method=GET path=/stylesheets/growler.css?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=10ms status=200 bytes=4137
-2013-08-22T09:49:24.193825+00:00 heroku[router]: at=info method=GET path=/stylesheets/bootstrap.css?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=10ms status=200 bytes=56360
-2013-08-22T09:49:24.193756+00:00 heroku[router]: at=info method=GET path=/javascripts/effects.js?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=12ms status=200 bytes=38471
-2013-08-22T09:49:24.190490+00:00 heroku[router]: at=info method=GET path=/stylesheets/lightbox.css?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=11ms status=200 bytes=1641
-2013-08-22T09:49:24.200927+00:00 heroku[router]: at=info method=GET path=/javascripts/prototype.js?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=21ms status=200 bytes=163312
-2013-08-22T09:49:24.541213+00:00 heroku[router]: at=info method=GET path=/javascripts/dragdrop.js?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=3ms status=200 bytes=31056
-2013-08-22T09:49:24.537654+00:00 heroku[router]: at=info method=GET path=/javascripts/controls.js?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=3ms status=200 bytes=34787
-2013-08-22T09:49:24.849742+00:00 heroku[router]: at=info method=GET path=/javascripts/typo.js?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=2ms status=200 bytes=4281
-2013-08-22T09:49:25.152437+00:00 heroku[router]: at=info method=GET path=/javascripts/administration.js?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=2ms status=200 bytes=14389
-2013-08-22T09:49:25.161911+00:00 heroku[router]: at=info method=GET path=/javascripts/lightbox.js?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=2ms status=200 bytes=18514
-2013-08-22T09:49:25.154820+00:00 heroku[router]: at=info method=GET path=/javascripts/typo_carousel.js?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=2ms status=200 bytes=11080
-2013-08-22T09:49:25.482818+00
-:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/ckeditor.js?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=22ms status=200 bytes=367021
-2013-08-22T09:49:25.774184+00:00 heroku[router]: at=info method=GET path=/javascripts/calendar_date_select/calendar_date_select.js?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=7ms status=200 bytes=21981
-2013-08-22T09:49:28.445335+00:00 heroku[router]: at=info method=GET path=/images/spinner.gif?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=23ms status=200 bytes=2037
-2013-08-22T09:49:28.471424+00:00 heroku[router]: at=info method=GET path=/images/loading.gif host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=3ms service=9ms status=200 bytes=2767
-2013-08-22T09:49:28.473775+00:00 heroku[router]: at=info method=GET path=/images/closelabel.gif host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=2ms service=9ms status=200 bytes=979
-2013-08-22T09:49:28.770724+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=37ms status=200 bytes=0
-2013-08-22T09:49:36.694743+00:00 app[web.1]: 
-2013-08-22T09:49:36.694743+00:00 app[web.1]: Started GET "/admin/content/edit/29" for 103.5.132.53 at 2013-08-22 09:49:36 +0000
-2013-08-22T09:49:36.694743+00:00 app[web.1]: 
-2013-08-22T09:49:36.704457+00:00 app[web.1]:   Processing by Admin::ContentController#edit as HTML
-2013-08-22T09:49:36.704457+00:00 app[web.1]:   Parameters: {"id"=>"29"}
-2013-08-22T09:49:37.113058+00:00 app[web.1]: Rendered admin/content/_categories.html.erb (39.7ms)
-2013-08-22T09:49:37.158408+00:00 app[web.1]: Rendered admin/content/_attachment.html.erb (24.0ms)
-2013-08-22T09:49:37.158408+00:00 app[web.1]: Rendered admin/content/_form.html.erb (153.8ms)
-2013-08-22T09:49:37.179463+00:00 app[web.1]: Rendered admin/shared/_edit.html.erb (175.7ms)
-2013-08-22T09:49:37.179321+00:00 app[web.1]: Rendered admin/content/_merge_article.html.erb (0.8ms)
-2013-08-22T09:49:37.212366+00:00 heroku[router]: at=info method=GET path=/admin/content/edit/29 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=519ms status=200 bytes=15736
-2013-08-22T09:49:37.206072+00:00 app[web.1]: Completed 200 OK in 502ms (Views: 166.4ms | ActiveRecord: 295.0ms)
-2013-08-22T09:49:37.205801+00:00 app[web.1]: Rendered admin/content/new.html.erb within layouts/administration (202.4ms)
-2013-08-22T09:49:37.790337+00:00 heroku[router]: at=info method=GET path=/images/calendar_date_select/calendar.gif?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=4ms status=200 bytes=581
-2013-08-22T09:49:38.018740+00:00 heroku[router]: at=info method=GET path=/images/spinner-blue.gif?1377164627 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=201ms status=200 bytes=1898
-2013-08-22T09:49:38.302261+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/skins/kama/editor.css?t=B8DJ5M3 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=7ms status=200 bytes=30554
-2013-08-22T09:49:38.316939+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/lang/en.js?t=B8DJ5M3 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=5ms status=200 bytes=17278
-2013-08-22T09:49:38.942225+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/skins/kama/icons.png host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=5ms service=4ms status=200 bytes=5598
-2013-08-22T09:49:38.939662+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/contents.css host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=11ms status=200 bytes=559
-2013-08-22T09:49:38.939985+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/skins/kama/images/sprites.png host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=6ms status=200 bytes=7086
-2013-08-22T09:49:39.309640+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/plugins/styles/styles/default.js?t=B8DJ5M3 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=5ms status=200 bytes=1365
-2013-08-22T09:49:41.713405+00:00 app[web.1]: 
-2013-08-22T09:49:41.713405+00:00 app[web.1]: 
-2013-08-22T09:49:41.715295+00:00 app[web.1]:   Processing by Admin::ContentController#edit as HTML
-2013-08-22T09:49:41.715295+00:00 app[web.1]:   Parameters: {"id"=>"138"}
-2013-08-22T09:49:41.713405+00:00 app[web.1]: Started GET "/admin/content/edit/138" for 103.5.132.53 at 2013-08-22 09:49:41 +0000
-2013-08-22T09:49:41.805483+00:00 app[web.1]: Rendered admin/content/_categories.html.erb (11.6ms)
-2013-08-22T09:49:41.819363+00:00 app[web.1]: Rendered admin/content/_attachment.html.erb (7.2ms)
-2013-08-22T09:49:41.819363+00:00 app[web.1]: Rendered admin/content/_form.html.erb (37.4ms)
-2013-08-22T09:49:41.827008+00:00 app[web.1]: Rendered admin/shared/_edit.html.erb (47.1ms)
-2013-08-22T09:49:41.827008+00:00 app[web.1]: Rendered admin/content/_merge_article.html.erb (1.6ms)
-2013-08-22T09:49:41.857217+00:00 app[web.1]: Rendered admin/content/new.html.erb within layouts/administration (77.8ms)
-2013-08-22T09:49:41.857457+00:00 app[web.1]: Completed 200 OK in 142ms (Views: 69.4ms | ActiveRecord: 48.1ms)
-2013-08-22T09:49:41.861643+00:00 heroku[router]: at=info method=GET path=/admin/content/edit/138 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=0ms service=159ms status=200 bytes=15697
-2013-08-22T09:49:53.303811+00:00 app[web.1]: Started POST "/admin/content/merge_article/4" for 103.5.132.53 at 2013-08-22 09:49:53 +0000
-2013-08-22T09:49:53.303811+00:00 app[web.1]: 
-2013-08-22T09:49:53.305813+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"ua905mxgL/k3L9xGAhPIPAoMCVjJA1hy+Ik8f1u+H7o=", "merge_with"=>"29", "current_id"=>"138", "commit"=>"Merge", "id"=>"4"}
-2013-08-22T09:49:53.303811+00:00 app[web.1]: 
-2013-08-22T09:49:53.305813+00:00 app[web.1]:   Processing by Admin::ContentController#merge_article as HTML
-2013-08-22T09:49:53.393761+00:00 app[web.1]: Completed 500 Internal Server Error in 88ms
-2013-08-22T09:49:53.417194+00:00 app[web.1]: NoMethodError (protected method `merge_with' called for #<Article:0x00000006c1ca40>):
-2013-08-22T09:49:53.417194+00:00 app[web.1]: 
-2013-08-22T09:49:53.417194+00:00 app[web.1]: 
-2013-08-22T09:49:53.417194+00:00 app[web.1]:   app/controllers/admin/content_controller.rb:46:in `merge_article'
-2013-08-22T09:49:53.417194+00:00 app[web.1]: 
-2013-08-22T09:49:53.440871+00:00 app[web.1]: #<Timeout::Error: execution expired>
-2013-08-22T09:49:53.445593+00:00 heroku[router]: at=info method=POST path=/admin/content/merge_article/4 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=157ms status=500 bytes=728
+2013-08-22T16:49:26.801450+00:00 app[web.1]: ews", "/app/vendor/plugins/tag_sidebar/app/views", "/app/vendor/plugins/static_sidebar/app/views", "/app/vendor/plugins/search_sidebar/app/views", "/app/vendor/plugins/rails_log_stdout/app/views", "/app/vendor/plugins/rails3_serve_static_assets/app/views", "/app/vendor/plugins/page_sidebar/app/views", "/app/vendor/plugins/meta_sidebar/app/views", "/app/vendor/plugins/livesearch_sidebar/app/views", "/app/vendor/plugins/filemanager/app/views", "/app/vendor/plugins/easy-ckeditor/app/views", "/app/vendor/plugins/dynamic_form/app/views", "/app/vendor/plugins/category_sidebar/app/views", "/app/vendor/plugins/calendar_date_select/app/views", "/app/vendor/plugins/authors_sidebar/app/views", "/app/vendor/plugins/archives_sidebar/app/views", "/app/vendor/plugins/amazon_sidebar/app/views", "/app/vendor/plugins/prototype_legacy_helper/app/views", "/app/vendor/plugins/localization/app/views", "/app/vendor/bundle/ruby/1.9.1/gems/kaminari-0.14.1/app/views">
+2013-08-22T16:49:26.799105+00:00 app[web.1]: Rendered vendor/plugins/page_sidebar/app/views/page_sidebar/_content.html.erb (35.7ms)
+2013-08-22T16:49:26.801450+00:00 app[web.1]: #<ActionView::MissingTemplate: Missing partial /sidebar/content with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/app/themes/bootstrap/views", "/app/themes/bootstrap/views", "/app/app/views", "/app/vendor/plugins/xml_sidebar/app/views", "/app/vendor/plugins/upload_progress/app/views", "/app/vendor/plugins/typo_textfilter_textile_and_markdown/app/views", "/app/vendor/plugins/typo_textfilter_textile/app/views", "/app/vendor/plugins/typo_textfilter_smartypants/app/views", "/app/vendor/plugins/typo_textfilter_none/app/views", "/app/vendor/plugins/typo_textfilter_markdown/app/views", "/app/vendor/plugins/typo_textfilter_lightbox/app/views", "/app/vendor/plugins/typo_textfilter_htmlfilter/app/views", "/app/vendor/plugins/typo_textfilter_flickr/app/views", "/app/vendor/plugins/typo_textfilter_code/app/views", "/app/vendor/plugins/typo_login_system/app/views", "/app/vendor/plugins/typo_converter/app/views", "/app/vendor/plugins/typo_avatar_gravatar/app/vi
+2013-08-22T16:49:26.801693+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/index.html.erb within layouts/default (128.7ms)
+2013-08-22T16:49:26.801973+00:00 app[web.1]: Completed 200 OK in 156ms (Views: 46.2ms | ActiveRecord: 102.6ms)
+2013-08-22T16:47:23.774095+00:00 heroku[router]: at=info method=GET path=/javascripts/ckeditor/skins/kama/icons.png host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=4ms status=200 bytes=5598
+2013-08-22T16:48:12.644448+00:00 heroku[router]: at=info method=GET path=/ host=warm-spire-7892.herokuapp.com fwd="222.89.65.106" dyno=web.1 connect=1ms service=182ms status=200 bytes=4175
+2013-08-22T16:47:45.433578+00:00 heroku[router]: at=info method=GET path=/javascripts/typo.js?1377189651 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=1ms service=3ms status=200 bytes=4281
+2013-08-22T16:49:55.228930+00:00 app[web.1]: 
+2013-08-22T16:49:55.228930+00:00 app[web.1]: 
+2013-08-22T16:49:55.230061+00:00 app[web.1]:   Processing by ArticlesController#index as RSS
+2013-08-22T16:49:55.228930+00:00 app[web.1]: Started GET "/articles.rss" for 66.249.72.180 at 2013-08-22 16:49:55 +0000
+2013-08-22T16:49:55.262532+00:00 heroku[router]: at=info method=GET path=/articles.rss host=warm-spire-7892.herokuapp.com fwd="66.249.72.180" dyno=web.1 connect=1ms service=39ms status=500 bytes=728
+2013-08-22T16:49:55.258565+00:00 app[web.1]: Rendered shared/_rss_item_article.rss.builder (9.5ms)
+2013-08-22T16:49:55.258797+00:00 app[web.1]: Completed 500 Internal Server Error in 29ms
+2013-08-22T16:49:55.265108+00:00 app[web.1]:     12:   xm.pubDate pub_date(item.published_at)
+2013-08-22T16:49:55.265108+00:00 app[web.1]: ActionView::Template::Error (undefined method `email' for nil:NilClass):
+2013-08-22T16:49:55.258565+00:00 app[web.1]: Rendered articles/index_rss_feed.rss.builder (15.2ms)
+2013-08-22T16:49:55.265108+00:00 app[web.1]: 
+2013-08-22T16:49:55.265108+00:00 app[web.1]:     13:   xm.guid "urn:uuid:#{item.guid}", "isPermaLink" => "false"
+2013-08-22T16:49:55.265108+00:00 app[web.1]:   app/models/article.rb:419:in `link_to_author?'
+2013-08-22T16:49:55.265108+00:00 app[web.1]:     11:   xm.description content_html + item.get_rss_description
+2013-08-22T16:49:55.265415+00:00 app[web.1]:   app/views/shared/_rss_item_article.rss.builder:14:in `block in _app_views_shared__rss_item_article_rss_builder___4119465858492731587_52956800_2529795973169886946'
+2013-08-22T16:49:55.265108+00:00 app[web.1]:     14:   if item.link_to_author?
+2013-08-22T16:49:55.265108+00:00 app[web.1]:     15:     xm.author "#{item.user.email} (#{item.user.name})"
+2013-08-22T16:49:55.265108+00:00 app[web.1]:     16:   end
+2013-08-22T16:49:55.265415+00:00 app[web.1]:   app/controllers/articles_controller.rb:188:in `render_articles_feed'
+2013-08-22T16:49:55.265415+00:00 app[web.1]:   app/controllers/articles_controller.rb:44:in `block (2 levels) in index'
+2013-08-22T16:49:55.265415+00:00 app[web.1]:   app/views/articles/index_rss_feed.rss.builder:16:in `block (3 levels) in _app_views_articles_index_rss_feed_rss_builder__3104230802120663992_53098860_1245855505734012286'
+2013-08-22T16:49:55.265108+00:00 app[web.1]:     17:   xm.comments(item.permalink_url("comments"))
+2013-08-22T16:49:55.265415+00:00 app[web.1]: 
+2013-08-22T16:49:55.265415+00:00 app[web.1]:   app/views/articles/index_rss_feed.rss.builder:4:in `_app_views_articles_index_rss_feed_rss_builder__3104230802120663992_53098860_1245855505734012286'
+2013-08-22T16:49:55.265415+00:00 app[web.1]:   app/views/shared/_rss_item_article.rss.builder:1:in `_app_views_shared__rss_item_article_rss_builder___4119465858492731587_52956800_2529795973169886946'
+2013-08-22T16:49:55.265415+00:00 app[web.1]:   app/views/articles/index_rss_feed.rss.builder:15:in `block (2 levels) in _app_views_articles_index_rss_feed_rss_builder__3104230802120663992_53098860_1245855505734012286'
+2013-08-22T16:49:55.265415+00:00 app[web.1]:   app/views/articles/index_rss_feed.rss.builder:7:in `block in _app_views_articles_index_rss_feed_rss_builder__3104230802120663992_53098860_1245855505734012286'
+2013-08-22T16:49:55.265689+00:00 app[web.1]: 
+2013-08-22T16:49:55.265415+00:00 app[web.1]:   app/controllers/articles_controller.rb:37:in `index'
+2013-08-22T16:50:00.338700+00:00 app[web.1]: 
+2013-08-22T16:50:00.338700+00:00 app[web.1]: Started GET "/" for 221.0.95.242 at 2013-08-22 16:50:00 +0000
+2013-08-22T16:50:00.338700+00:00 app[web.1]: 
+2013-08-22T16:50:00.339492+00:00 app[web.1]:   Processing by ArticlesController#index as 
+2013-08-22T16:50:00.364383+00:00 app[web.1]: Rendered articles/_article_excerpt.html.erb (4.5ms)
+2013-08-22T16:50:00.364383+00:00 app[web.1]: Rendered articles/_article_content.html.erb (5.5ms)
+2013-08-22T16:50:00.364528+00:00 app[web.1]: Rendered articles/_protected_article_content.html.erb (6.4ms)
+2013-08-22T16:50:00.378682+00:00 app[web.1]: Rendered articles/_protected_article_content.html.erb (3.9ms)
+2013-08-22T16:50:00.378682+00:00 app[web.1]: Rendered articles/_article_excerpt.html.erb (3.5ms)
+2013-08-22T16:50:00.378682+00:00 app[web.1]: Rendered articles/_article_content.html.erb (3.6ms)
+2013-08-22T16:50:00.391100+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/_article.html.erb (35.1ms)
+2013-08-22T16:50:00.412761+00:00 app[web.1]: Rendered vendor/plugins/page_sidebar/app/views/page_sidebar/_content.html.erb (5.6ms)
+2013-08-22T16:50:00.414126+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/index.html.erb within layouts/default (59.1ms)
+2013-08-22T16:50:00.414020+00:00 app[web.1]: ews", "/app/vendor/plugins/tag_sidebar/app/views", "/app/vendor/plugins/static_sidebar/app/views", "/app/vendor/plugins/search_sidebar/app/views", "/app/vendor/plugins/rails_log_stdout/app/views", "/app/vendor/plugins/rails3_serve_static_assets/app/views", "/app/vendor/plugins/page_sidebar/app/views", "/app/vendor/plugins/meta_sidebar/app/views", "/app/vendor/plugins/livesearch_sidebar/app/views", "/app/vendor/plugins/filemanager/app/views", "/app/vendor/plugins/easy-ckeditor/app/views", "/app/vendor/plugins/dynamic_form/app/views", "/app/vendor/plugins/category_sidebar/app/views", "/app/vendor/plugins/calendar_date_select/app/views", "/app/vendor/plugins/authors_sidebar/app/views", "/app/vendor/plugins/archives_sidebar/app/views", "/app/vendor/plugins/amazon_sidebar/app/views", "/app/vendor/plugins/prototype_legacy_helper/app/views", "/app/vendor/plugins/localization/app/views", "/app/vendor/bundle/ruby/1.9.1/gems/kaminari-0.14.1/app/views">
+2013-08-22T16:50:00.414020+00:00 app[web.1]: #<ActionView::MissingTemplate: Missing partial /sidebar/content with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/app/themes/bootstrap/views", "/app/themes/bootstrap/views", "/app/app/views", "/app/vendor/plugins/xml_sidebar/app/views", "/app/vendor/plugins/upload_progress/app/views", "/app/vendor/plugins/typo_textfilter_textile_and_markdown/app/views", "/app/vendor/plugins/typo_textfilter_textile/app/views", "/app/vendor/plugins/typo_textfilter_smartypants/app/views", "/app/vendor/plugins/typo_textfilter_none/app/views", "/app/vendor/plugins/typo_textfilter_markdown/app/views", "/app/vendor/plugins/typo_textfilter_lightbox/app/views", "/app/vendor/plugins/typo_textfilter_htmlfilter/app/views", "/app/vendor/plugins/typo_textfilter_flickr/app/views", "/app/vendor/plugins/typo_textfilter_code/app/views", "/app/vendor/plugins/typo_login_system/app/views", "/app/vendor/plugins/typo_converter/app/views", "/app/vendor/plugins/typo_avatar_gravatar/app/vi
+2013-08-22T16:50:00.414314+00:00 app[web.1]: Completed 200 OK in 75ms (Views: 29.8ms | ActiveRecord: 47.6ms)
+2013-08-22T16:49:26.811332+00:00 heroku[router]: at=info method=GET path=/ host=warm-spire-7892.herokuapp.com fwd="61.188.188.11" dyno=web.1 connect=10ms service=168ms status=200 bytes=4175
+2013-08-22T16:47:59.757571+00:00 heroku[router]: at=info method=GET path=/images/spinner.gif?1377189651 host=warm-spire-7892.herokuapp.com fwd="103.5.132.53" dyno=web.1 connect=8ms service=3ms status=200 bytes=2037
+2013-08-22T16:50:16.801752+00:00 app[web.1]: 
+2013-08-22T16:50:16.801752+00:00 app[web.1]: Started GET "/articles.rss" for 66.249.72.208 at 2013-08-22 16:50:16 +0000
+2013-08-22T16:50:16.801752+00:00 app[web.1]: 
+2013-08-22T16:50:16.803362+00:00 app[web.1]:   Processing by ArticlesController#index as RSS
+2013-08-22T16:50:16.854528+00:00 heroku[router]: at=info method=GET path=/articles.rss host=warm-spire-7892.herokuapp.com fwd="66.249.72.208" dyno=web.1 connect=4ms service=61ms status=500 bytes=728
+2013-08-22T16:50:16.854651+00:00 app[web.1]:     11:   xm.description content_html + item.get_rss_description
+2013-08-22T16:50:16.851448+00:00 app[web.1]: Completed 500 Internal Server Error in 48ms
+2013-08-22T16:50:16.851249+00:00 app[web.1]: Rendered articles/index_rss_feed.rss.builder (20.9ms)
+2013-08-22T16:50:16.854651+00:00 app[web.1]:     15:     xm.author "#{item.user.email} (#{item.user.name})"
+2013-08-22T16:50:16.854998+00:00 app[web.1]:   app/views/articles/index_rss_feed.rss.builder:16:in `block (3 levels) in _app_views_articles_index_rss_feed_rss_builder__3104230802120663992_53098860_1245855505734012286'
+2013-08-22T16:50:16.854651+00:00 app[web.1]: ActionView::Template::Error (undefined method `email' for nil:NilClass):
+2013-08-22T16:50:16.854651+00:00 app[web.1]: 
+2013-08-22T16:50:16.851249+00:00 app[web.1]: Rendered shared/_rss_item_article.rss.builder (9.3ms)
+2013-08-22T16:50:16.854651+00:00 app[web.1]:     17:   xm.comments(item.permalink_url("comments"))
+2013-08-22T16:50:16.854998+00:00 app[web.1]:   app/views/shared/_rss_item_article.rss.builder:14:in `block in _app_views_shared__rss_item_article_rss_builder___4119465858492731587_52956800_2529795973169886946'
+2013-08-22T16:50:16.854998+00:00 app[web.1]:   app/views/articles/index_rss_feed.rss.builder:7:in `block in _app_views_articles_index_rss_feed_rss_builder__3104230802120663992_53098860_1245855505734012286'
+2013-08-22T16:50:16.854651+00:00 app[web.1]:     13:   xm.guid "urn:uuid:#{item.guid}", "isPermaLink" => "false"
+2013-08-22T16:50:16.854651+00:00 app[web.1]:     12:   xm.pubDate pub_date(item.published_at)
+2013-08-22T16:50:16.854651+00:00 app[web.1]:   app/models/article.rb:419:in `link_to_author?'
+2013-08-22T16:50:16.854998+00:00 app[web.1]:   app/controllers/articles_controller.rb:44:in `block (2 levels) in index'
+2013-08-22T16:50:16.854998+00:00 app[web.1]:   app/controllers/articles_controller.rb:188:in `render_articles_feed'
+2013-08-22T16:50:16.854998+00:00 app[web.1]:   app/views/articles/index_rss_feed.rss.builder:15:in `block (2 levels) in _app_views_articles_index_rss_feed_rss_builder__3104230802120663992_53098860_1245855505734012286'
+2013-08-22T16:50:16.854998+00:00 app[web.1]:   app/views/shared/_rss_item_article.rss.builder:1:in `_app_views_shared__rss_item_article_rss_builder___4119465858492731587_52956800_2529795973169886946'
+2013-08-22T16:50:16.854651+00:00 app[web.1]:     14:   if item.link_to_author?
+2013-08-22T16:50:16.854998+00:00 app[web.1]:   app/views/articles/index_rss_feed.rss.builder:4:in `_app_views_articles_index_rss_feed_rss_builder__3104230802120663992_53098860_1245855505734012286'
+2013-08-22T16:50:16.854651+00:00 app[web.1]:     16:   end
+2013-08-22T16:50:16.855258+00:00 app[web.1]: 
+2013-08-22T16:50:16.854998+00:00 app[web.1]:   app/controllers/articles_controller.rb:37:in `index'
+2013-08-22T16:50:16.854998+00:00 app[web.1]: 
+2013-08-22T16:50:26.903483+00:00 app[web.1]: 
+2013-08-22T16:50:26.903483+00:00 app[web.1]: Started GET "/" for 66.249.72.162 at 2013-08-22 16:50:26 +0000
+2013-08-22T16:50:26.903483+00:00 app[web.1]: 
+2013-08-22T16:50:26.904664+00:00 app[web.1]:   Processing by ArticlesController#index as 
+2013-08-22T16:50:26.936263+00:00 app[web.1]: Rendered articles/_protected_article_content.html.erb (6.6ms)
+2013-08-22T16:50:26.936263+00:00 app[web.1]: Rendered articles/_article_excerpt.html.erb (4.6ms)
+2013-08-22T16:50:26.953336+00:00 app[web.1]: Rendered articles/_article_content.html.erb (5.6ms)
+2013-08-22T16:50:26.936263+00:00 app[web.1]: Rendered articles/_article_content.html.erb (5.6ms)
+2013-08-22T16:50:26.969840+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/_article.html.erb (42.5ms)
+2013-08-22T16:50:26.953336+00:00 app[web.1]: Rendered articles/_article_excerpt.html.erb (5.4ms)
+2013-08-22T16:50:26.953336+00:00 app[web.1]: Rendered articles/_protected_article_content.html.erb (5.8ms)
+2013-08-22T16:50:27.003682+00:00 heroku[router]: at=info method=GET path=/ host=warm-spire-7892.herokuapp.com fwd="66.249.72.162" dyno=web.1 connect=2ms service=104ms status=200 bytes=4175
+2013-08-22T16:50:27.002351+00:00 app[web.1]: ews", "/app/vendor/plugins/tag_sidebar/app/views", "/app/vendor/plugins/static_sidebar/app/views", "/app/vendor/plugins/search_sidebar/app/views", "/app/vendor/plugins/rails_log_stdout/app/views", "/app/vendor/plugins/rails3_serve_static_assets/app/views", "/app/vendor/plugins/page_sidebar/app/views", "/app/vendor/plugins/meta_sidebar/app/views", "/app/vendor/plugins/livesearch_sidebar/app/views", "/app/vendor/plugins/filemanager/app/views", "/app/vendor/plugins/easy-ckeditor/app/views", "/app/vendor/plugins/dynamic_form/app/views", "/app/vendor/plugins/category_sidebar/app/views", "/app/vendor/plugins/calendar_date_select/app/views", "/app/vendor/plugins/authors_sidebar/app/views", "/app/vendor/plugins/archives_sidebar/app/views", "/app/vendor/plugins/amazon_sidebar/app/views", "/app/vendor/plugins/prototype_legacy_helper/app/views", "/app/vendor/plugins/localization/app/views", "/app/vendor/bundle/ruby/1.9.1/gems/kaminari-0.14.1/app/views">
+2013-08-22T16:50:26.999734+00:00 app[web.1]: Rendered vendor/plugins/page_sidebar/app/views/page_sidebar/_content.html.erb (7.2ms)
+2013-08-22T16:50:27.002351+00:00 app[web.1]: #<ActionView::MissingTemplate: Missing partial /sidebar/content with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/app/themes/bootstrap/views", "/app/themes/bootstrap/views", "/app/app/views", "/app/vendor/plugins/xml_sidebar/app/views", "/app/vendor/plugins/upload_progress/app/views", "/app/vendor/plugins/typo_textfilter_textile_and_markdown/app/views", "/app/vendor/plugins/typo_textfilter_textile/app/views", "/app/vendor/plugins/typo_textfilter_smartypants/app/views", "/app/vendor/plugins/typo_textfilter_none/app/views", "/app/vendor/plugins/typo_textfilter_markdown/app/views", "/app/vendor/plugins/typo_textfilter_lightbox/app/views", "/app/vendor/plugins/typo_textfilter_htmlfilter/app/views", "/app/vendor/plugins/typo_textfilter_flickr/app/views", "/app/vendor/plugins/typo_textfilter_code/app/views", "/app/vendor/plugins/typo_login_system/app/views", "/app/vendor/plugins/typo_converter/app/views", "/app/vendor/plugins/typo_avatar_gravatar/app/vi
+2013-08-22T16:50:27.002757+00:00 app[web.1]: Completed 200 OK in 98ms (Views: 38.0ms | ActiveRecord: 65.0ms)
+2013-08-22T16:50:27.002449+00:00 app[web.1]: Rendered themes/bootstrap/views/articles/index.html.erb within layouts/default (76.3ms)
