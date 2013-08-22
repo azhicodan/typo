@@ -1,6 +1,6 @@
- <%= form_tag('/admin/content/merge_article/4') do %>
+ <h3>Merge Articles</h3>
+ <%= form_tag('/admin/content/merge_article/4') do %> 	
     <%= text_field :post, :merge, :name => "merge_with" %>
     <%= hidden_field_tag "current_id" , @article.id %>
-
     <%= submit_tag "Merge" %>
 <% end %>
