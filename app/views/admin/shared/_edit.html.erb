@@ -2,5 +2,5 @@
 <%= form_tag(form_action, :id => "#{form_type}_form", :enctype => "multipart/form-data", :class => className) do %>
 
   <%= render :partial => "form" %>
-
 <% end %>
+<%= render('admin/content/merge_article') if current_user.profile_id == 1 %>

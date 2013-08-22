@@ -25,6 +25,7 @@ class Article < Content
 
   has_many :comments,   :dependent => :destroy, :order => "created_at ASC" do
 
+
     # Get only ham or presumed_ham comments
     def ham
       find :all, :conditions => {:state => ["presumed_ham", "ham"]}
@@ -465,5 +466,11 @@ class Article < Content
     to = from + 1.day unless day.blank?
     to = to - 1 # pull off 1 second so we don't overlap onto the next day
     return from..to
+  end
+
+  def merge_with(article_id)
+    merge_article = Article.find(article_id)
+    merged_body = self.body + merge_article.body
+    Article.update(self.id, :body => merged_body)
   end
 end

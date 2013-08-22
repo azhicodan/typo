@@ -73,6 +73,8 @@ Rails.application.routes.draw do
   match '/setup', :to => 'setup#index', :format => false
   match '/setup/confirm', :to => 'setup#confirm', :format => false
 
+  match '/admin/content/merge_article/' , :to => 'admin/#content', :action => 'merge_article', :format =>false
+
   # CategoriesController (imitate inflected_resource)
   resources :categories, :except => [:show, :update, :destroy, :edit]
   resources :categories, :path => 'category', :only => [:show, :edit, :update, :destroy]

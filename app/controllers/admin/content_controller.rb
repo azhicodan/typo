@@ -37,6 +37,15 @@ class Admin::ContentController < Admin::BaseController
     new_or_edit
   end
 
+  def merge_article
+    flash[:notice] = "Article merged successfully"
+    id = params[:current_id].to_i
+    article = Article.find(id)
+    merge_id = params[:merge_with].to_i
+    article.merge_with(merge_id)
+    redirect_to :action => 'index'
+  end
+
   def destroy
     @record = Article.find(params[:id])
 
@@ -240,4 +249,5 @@ class Admin::ContentController < Admin::BaseController
   def setup_resources
     @resources = Resource.by_created_at
   end
+
 end

@@ -1,5 +1,6 @@
-<div class=''>
-    <h3><%= _("Merge Articles") %></h3>
-    <input id="merge_with" type="text" name="merge_with" class='large' />
-    <%= submit_tag(_("Merge"), {:class => 'btn'}) %>    
- </div>
+ <%= form_tag('/admin/content/merge_article/4') do %>
+    <%= text_field :post, :merge, :name => "merge_with" %>
+    <%= hidden_field_tag "current_id" , @article.id %>
+
+    <%= submit_tag "Merge" %>
+<% end %>
