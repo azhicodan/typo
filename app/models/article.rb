@@ -80,9 +80,19 @@ class Article < Content
   def merge_with(article_id = nil, user_login = nil)
     merge_article = Article.find(article_id)
     merged_body = self.body + merge_article.body
-    Article.create(:allow_comments => true, :allow_pings => true, :author => self.author, :body => merged_body, :permalink => self.permalink, :published => true, :published_at => Time.now, :title => self.title, :type => "Article", :user_id => user_login)
+    #debugger
+    new_article = Article.create(:allow_comments => true, :allow_pings => true, :author => self.author, :body => merged_body, :permalink => self.permalink, :published => true, :published_at => Time.now, :title => self.title, :type => "Article", :user_id => user_login)
+    self.comments.each do |c|
+      new_article.comments<<c
+    end
+    merge_article.comments.each do |c|
+      new_article.comments<<c
+    end
+
+    #Destroy the original articles
     Article.destroy(self.id)
     Article.destroy(article_id)
+
   end
 
   def has_child?
