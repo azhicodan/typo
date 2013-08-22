@@ -468,9 +468,9 @@ class Article < Content
     return from..to
   end
 
-  def merge_with(article_id)
+  def merge_with(article_id = nil, user_login = nil)
     merge_article = Article.find(article_id)
     merged_body = self.body + merge_article.body
-    Article.update(self.id, :body => merged_body)
+    Article.create(:allow_comments => true, :allow_pings => true, :author => self.author, :body => merged_body, :permalink => self.permalink, :published => true, :published_at => Time.now, :title => self.title, :type => "Article", :user_id => user_login)
   end
 end

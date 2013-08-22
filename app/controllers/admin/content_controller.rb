@@ -42,7 +42,8 @@ class Admin::ContentController < Admin::BaseController
     id = params[:current_id].to_i
     article = Article.find(id)
     merge_id = params[:merge_with].to_i
-    article.merge_with(merge_id)
+    author = current_user.login
+    article.merge_with(merge_id, author)
     redirect_to :action => 'index'
   end
 
